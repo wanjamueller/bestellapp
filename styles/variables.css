@@ -1,0 +1,44 @@
+:root {
+    /* #region colors */
+
+    --color-orange: rgba(231, 108, 31, 1);
+    --color-darkgrey: rgba(54, 53, 52, 1);
+    --color-cream: rgba(253, 234, 220, 1);
+
+    /* #endregion colors */
+
+    /* #region fonts */
+
+    --h1-hero-size: 3rem;
+    --h1-hero-weight: 700;
+    --h2-category-size: 2.5rem;
+    --h2-categories-weight: 700;
+
+    /* #endregion fonts */
+
+    /* #region dishes */
+
+    --h4-dishes-size: 1.5rem;
+    --h4-dishes-weight: 600;
+    --p-dishes-size: 1rem;
+    --p-dishes-weight: 500;
+    --button-dishes-size: 1rem;
+    --button-dishes-weight: 600;
+    --price-size: 1.5rem;
+    --price-weight: 600;
+
+    /* #endregion dishes */
+
+    /* #region cart */
+
+    --h3-cart-size: 2rem;
+    --h3-cart-weight: 700;
+    --p-cart-size: 1.375rem;
+    --p-cart-weight: 700;
+    --sum-cart-size: 1.25rem;
+    --sum-cart-weight: 600;
+    --total-cart-size: 1.375rem;
+    --total-cart-weight: 700;
+
+    /* #endregion cart */
+}

@@ -1,0 +1,29 @@
+header {
+    height: 128px;
+    transition: 0.2s ease-in-out;
+    background-color: var(--color-orange);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 49px 50px 41px 120px;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 80px;
+        justify-content: center;
+        transition: 0.2s ease-in-out;
+
+        nav {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    header {
+        padding: 49px max(calc(50% - 670px), 50px) 41px max(calc(50% - 600px), 120px);
+    }
+}

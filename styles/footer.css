@@ -1,0 +1,34 @@
+footer {
+    height: 128px;
+    transition: 0.2s ease-in-out;
+
+    background-color: var(--color-orange);
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 72px;
+
+    padding: min(70px, 5%) clamp(80px, calc(-25.714px + 33.036vw), 450px) min(30px, 5%)
+        clamp(80px, calc(-25.714px + 33.036vw), 450px);
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    footer {
+        padding: 70px max(calc(50% - 270px), 450px) 30px max(calc(50% - 270px), 450px);
+    }
+}

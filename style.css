@@ -1,1 +1,10 @@
+.hero-section {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 
+    img {
+        height: min(60%, 508px);
+        right: clamp(-325px, calc((100vw - 400px) * 325 / 1040 - 325px), 0px);
+    }
+}

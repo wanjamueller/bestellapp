@@ -33,4 +33,10 @@ body {
     }
 }
 
+@media screen and (min-width: 1441px) {
+    .main-content {
+        padding: 0px calc(50% - 720px);
+    }
+}
+
 /* #endregion main content sizet */

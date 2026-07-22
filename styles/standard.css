@@ -15,6 +15,26 @@ body {
 
     h1 {
         font-family: "Palanquin Dark";
+        font-size: var(--h1-hero-size);
+        font-weight: var(--h1-hero-weight);
+    }
+
+    h2 {
+        font-family: "Palanquin";
+        font-size: var(--h2-category-size);
+        font-weight: var(--h2-categories-weight);
+    }
+
+    h3 {
+        font-family: "Palanquin";
+        font-size: var(--h3-cart-size);
+        font-weight: var(--h3-cart-weight);
+    }
+
+    h4 {
+        font-family: "Palanquin";
+        font-size: var(--h4-dishes-size);
+        font-weight: var(--h4-dishes-weight);
     }
 }
 
@@ -25,6 +45,7 @@ body {
 .main-content {
     min-height: calc(100dvh-256px);
     display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {

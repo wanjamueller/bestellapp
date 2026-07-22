@@ -1,8 +1,10 @@
 const burgerRef = document.getElementById("burger-container");
 
 function renderBurger() {
-    for (let burgerI = 0; burgerI < 6; burgerI++) {
-        burgerRef.innerHTML += burgerSectionTemplate();
+    const burger = dishes.filter((b) => b.category === "Burger & Sandwiches");
+
+    for (let burgerIndex = 0; burgerIndex < burger.length; burgerIndex++) {
+        burgerRef.innerHTML += dishTemplate(burger[burgerIndex]);
     }
 }
 

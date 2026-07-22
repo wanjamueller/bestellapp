@@ -19,7 +19,7 @@
         <script defer src="./scripts/db.js"></script>
         <script defer src="./scripts/templates.js"></script>
     </head>
-    <body>
+    <body onload="init()">
         <header class="main-header">
             <img class="logo" src="./assets/img/Logo.svg" alt="BurgerHome-logo" />
             <nav>
@@ -54,16 +54,19 @@
                 <h2>Burger & Sandwiches</h2>
                 <div class="orange-bar"></div>
             </section>
+            <section class="dishes" id="burger-container"></section>
             <section class="category pizza-section">
                 <img src="./assets/icons/pizza.png" alt="" />
                 <h2>Pizza</h2>
                 <div class="orange-bar"></div>
             </section>
+            <section class="dishes" id="pizza-container"></section>
             <section class="category salad-section">
                 <img src="./assets/icons/salad.png" alt="" />
                 <h2>Salad</h2>
                 <div class="orange-bar"></div>
             </section>
+            <section class="dishes" id="salad-container"></section>
         </main>
         <footer class="main-footer">
             <p><strong>©</strong> 2026 BurgerHouse</p>

@@ -105,6 +105,52 @@
     }
 }
 
+.dishes {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 608px 45px 119px;
+    gap: 16px;
+
+    .dish-card {
+        width: 713px;
+        background-color: var(--color-cream);
+        display: flex;
+        justify-content: space-between;
+        border-radius: 12px;
+        gap: 15px;
+        padding: 10px;
+
+        img {
+            width: 207px;
+            border-radius: 12px;
+        }
+
+        .dish-text-wrapper {
+            display: flex;
+            padding: 16px 8px;
+        }
+
+        .dish-name {
+            width: 354px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .dish-price {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .add-button {
+                background-color: white;
+                border-radius: 20px;
+                padding: 5px 8px;
+            }
+        }
+    }
+}
+
 /* #endregions categories */
 
 @media screen and (max-width: 767px) {

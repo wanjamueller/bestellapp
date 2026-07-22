@@ -42,9 +42,9 @@ body {
 
 /* #region main content size */
 
-.main-content {
-    min-height: calc(100dvh-256px);
+main {
     display: flex;
+    min-height: calc(100dvh-256px);
     flex-direction: column;
 }
 

@@ -21,28 +21,39 @@
     </head>
     <body>
         <header class="main-header">
-            <img class="hero-pic" src="./assets/img/Logo.svg" alt="BurgerHome-logo" />
+            <img class="logo" src="./assets/img/Logo.svg" alt="BurgerHome-logo" />
             <nav>
                 <img src="./assets/img/nav.svg" alt="Burger-Nav-Icon" />
             </nav>
         </header>
         <main class="main-content">
-            <section class="hero-image">
-                <img src="./assets/img/hero.jpg" alt="tabe full of pizzas, burgers and other food" />
-            </section>
-            <section class="overlay"></section>
-            <section class="hero-txt">
-                <h1>BurgerHouse</h1>
-                <div class="rating">
-                    <img src="./assets/icons/star.svg" alt="rating-star" />
-                    <p>4,1</p>
-                    <p>(317)</p>
+            <!-- #region hero section -->
+            <section class="hero-section">
+                <div class="hero-img-div">
+                    <img class="hero" src="./assets/img/hero.jpg" alt="" />
                 </div>
-                <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+                <div class="overlay">
+                    <img src="./assets/icons/overlay.png" alt="" />
+                </div>
+                <div class="hero-txt-div">
+                    <div class="hero-txt">
+                        <h1><span class="text-orange">Burger</span><span class="text-dark">House</span></h1>
+                        <div class="rating">
+                            <img src="./assets/icons/star.svg" alt="rating-star" />
+                            <p id="rating">4,1</p>
+                            <p>(317)</p>
+                        </div>
+                    </div>
+                    <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+                </div>
             </section>
-            <section class="burger-section"></section>
-            <section class="pizza-section"></section>
-            <section class="salad-section"></section>
+            <!-- #endregion hero section  -->
+            <section class="category burger-section">
+                <img src="./assets/icons/burger.png" alt="" />
+                <h2>Burger & Sandwiches</h2>
+            </section>
+            <section class="category pizza-section"></section>
+            <section class="category salad-section"></section>
         </main>
         <footer class="main-footer">
             <p><strong>©</strong> 2026 BurgerHouse</p>

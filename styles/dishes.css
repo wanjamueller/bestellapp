@@ -1,0 +1,148 @@
+.dish-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .category {
+        height: 91px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        color: white;
+        gap: 28px;
+        margin-bottom: 25px;
+
+        img {
+            height: 91px;
+            align-self: flex-end;
+            padding-left: 167px;
+            z-index: 1;
+            bottom:;
+        }
+
+        h2 {
+            z-index: 1;
+            bottom: -10px;
+        }
+
+        .orange-bar {
+            position: absolute;
+            height: 60px;
+            width: 100%;
+            align-self: flex-end;
+            margin-bottom: 3px;
+            background-color: var(--color-orange);
+            z-index: -1;
+        }
+    }
+
+    .dishes {
+        display: flex;
+        flex-direction: column;
+        padding: 23px clamp(3.75rem, -35.2838rem + 81.4264vw, 38rem) 45px
+            clamp(3.75rem, -0.4525rem + 8.7667vw, 7.4375rem);
+        gap: 16px;
+
+        .dish-card {
+            width: clamp(31.25rem, 9.8811rem + 44.5765vw, 50rem);
+            height: 160px;
+            background-color: var(--color-cream);
+            display: flex;
+            justify-content: space-between;
+            border-radius: 12px;
+            gap: 15px;
+            padding: 10px;
+
+            .dish-image {
+                width: 207px;
+                border-radius: 12px;
+                /* object-fit: cover; */
+            }
+
+            .dish-text-wrapper {
+                display: flex;
+                padding: 16px 8px;
+            }
+
+            .dish-name {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                p {
+                    display: -webkit-box;
+                    line-clamp: 3;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            .dish-price {
+                min-width: 105px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                .add-button {
+                    background-color: white;
+                    border-radius: 20px;
+                    padding: 5px 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .dish-wrapper {
+        .category {
+            flex-direction: column;
+            padding: 0;
+
+            img {
+                bottom: 45px;
+                align-self: center;
+                padding-left: 0px;
+                height: 60px;
+            }
+
+            h2 {
+                bottom: 65px;
+            }
+
+            .sandwiches {
+                display: none;
+            }
+        }
+
+        .dishes {
+            padding: 0px 20px 100px 20px;
+
+            .dish-card {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+
+                .dish-image {
+                    width: 100%;
+                }
+
+                .dish-text-wrapper {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 16px;
+
+                    .dish-price {
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 let dishes = [
     {
-        "name": "Classic BBQ Bacon Burger",
+        "name": "BBQ Bacon Burger",
         "description":
             "Beef patty smothered in smoky BBQ sauce, crispy bacon, cheddar cheese, and crunchy onion straws on a toasted brioche bun.",
         "img": "../assets/img/dishes/classic-bbq-bacon-burger.jpg",
@@ -9,7 +9,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Smoky Pulled Pork Sandwich",
+        "name": "Pulled Pork Sandwich",
         "description":
             "Slow-smoked pulled pork tossed in tangy BBQ sauce, topped with creamy coleslaw on a toasted kaiser roll.",
         "img": "../assets/img/dishes/smoky-pulled-pork-sandwich.jpg",
@@ -18,7 +18,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "All-American Cheeseburger",
+        "name": "Cheeseburger",
         "description":
             "Juicy beef patty, melted American cheese, lettuce, tomato, pickles, and house sauce on a soft sesame bun.",
         "img": "../assets/img/dishes/all-american-cheeseburger.jpg",
@@ -27,7 +27,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Grilled Chicken Club Sandwich",
+        "name": "Club Sandwich",
         "description":
             "Grilled chicken breast, crispy bacon, Swiss cheese, lettuce, and tomato stacked on toasted sourdough with mayo.",
         "img": "../assets/img/dishes/grilled-chicken-club-sandwich.jpg",
@@ -36,7 +36,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Texas BBQ Brisket Burger",
+        "name": "BBQ Brisket Burger",
         "description":
             "Slow-smoked beef brisket, tangy BBQ glaze, crispy fried onions, and pepper jack cheese on a pretzel bun.",
         "img": "../assets/img/dishes/texas-bbq-brisket-burger.jpg",
@@ -45,7 +45,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Classic Pepperoni Pizza",
+        "name": "Pepperoni Pizza",
         "description":
             "Hand-tossed crust topped with zesty tomato sauce, mozzarella cheese, and generous pepperoni slices.",
         "img": "../assets/img/dishes/classic-pepperoni-pizza.jpg",
@@ -88,7 +88,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Classic Caesar Salad",
+        "name": "Caesar Salad",
         "description": "Crisp romaine lettuce, parmesan cheese, garlic croutons, and creamy Caesar dressing.",
         "img": "../assets/img/dishes/classic-caesar-salad.jpg",
         "price": 8.99,
@@ -96,7 +96,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Grilled Chicken Cobb Salad",
+        "name": "Chicken Cobb Salad",
         "description":
             "Grilled chicken, crispy bacon, hard-boiled egg, avocado, blue cheese, and tomatoes over mixed greens.",
         "img": "../assets/img/dishes/grilled-chicken-cobb-salad.jpg",
@@ -105,7 +105,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "BBQ Ranch Chopped Salad",
+        "name": "Ranch Chopped Salad",
         "description":
             "Grilled chicken, black beans, corn, cheddar cheese, and crispy tortilla strips tossed in BBQ ranch dressing.",
         "img": "../assets/img/dishes/bbq-ranch-chopped-salad.jpg",
@@ -132,7 +132,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Classic Vanilla Milkshake",
+        "name": "Vanilla Milkshake",
         "description": "Rich and creamy vanilla ice cream blended to smooth perfection, topped with whipped cream.",
         "img": "../assets/img/dishes/classic-vanilla-milkshake.jpg",
         "price": 5.49,
@@ -140,7 +140,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Double Chocolate Milkshake",
+        "name": "Chocolate Milkshake",
         "description":
             "Creamy chocolate ice cream blended with rich chocolate syrup, topped with whipped cream and chocolate shavings.",
         "img": "../assets/img/dishes/double-chocolate-milkshake.jpg",
@@ -157,7 +157,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Cookies and Cream Milkshake",
+        "name": "Cookies & Cream Milkshake",
         "description": "Vanilla ice cream blended with crushed chocolate sandwich cookies, topped with whipped cream.",
         "img": "../assets/img/dishes/cookies-and-cream-milkshake.jpg",
         "price": 6.49,
@@ -165,7 +165,7 @@ let dishes = [
         "amount": "0",
     },
     {
-        "name": "Peanut Butter Cup Milkshake",
+        "name": "Peanut Butter Milkshake",
         "description": "Creamy peanut butter blended with chocolate ice cream and chopped peanut butter cups.",
         "img": "../assets/img/dishes/peanut-butter-cup-milkshake.jpg",
         "price": 6.49,

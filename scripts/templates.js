@@ -1,7 +1,7 @@
 function dishTemplate(dish) {
     return /*html*/ `
             <div class="dish-card">
-                <img src="${dish.img}" alt="">
+                <img class="dish-image" src="${dish.img}" alt="">
                 <div class="dish-text-wrapper">
                     <div class="dish-name">
                         <h4>${dish.name}</h4>

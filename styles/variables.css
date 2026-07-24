@@ -20,7 +20,7 @@
 
     /* #region dishes */
 
-    --h4-dishes-size: 1.5rem;
+    --h4-dishes-size: clamp(1.25rem, 0.9651rem + 0.5944vw, 1.5rem);
     --h4-dishes-weight: 600;
     --p-dishes-size: 1rem;
     --p-dishes-weight: 500;

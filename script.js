@@ -57,6 +57,6 @@ function renderDishes() {
 // #endregion render dishes
 
 // Initialization
-function init() {
-    renderDishes();
-}
+// function init() {
+//     renderDishes();
+// }

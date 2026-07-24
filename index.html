@@ -6,7 +6,6 @@
         <link rel="shortcut icon" href="./assets/icons/burger.png" type="image/x-icon" />
         <title>BurgerHouse</title>
 
-        <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="./styles/standard.css" />
         <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/variables.css" />
@@ -14,6 +13,7 @@
         <link rel="stylesheet" href="./styles/footer.css" />
         <link rel="stylesheet" href="./styles/dishes.css" />
         <link rel="stylesheet" href="./styles/basket.css" />
+        <link rel="stylesheet" href="style.css" />
 
         <script defer src="script.js"></script>
         <script defer src="./scripts/db.js"></script>
@@ -45,13 +45,16 @@
                             <p>(317)</p>
                         </div>
                     </div>
-                    <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+                    <p class="slogan">The best of Burgers, Pizza, and Greens, all in one great place.</p>
                 </div>
             </section>
             <!-- #endregion hero section  -->
             <section class="category burger-section">
                 <img src="./assets/icons/burger.png" alt="" />
-                <h2>Burger & Sandwiches</h2>
+                <h2>
+                    <span>Burger</span>
+                    <span class="sandwiches"> & Sandwiches</span>
+                </h2>
                 <div class="orange-bar"></div>
             </section>
             <section class="dishes" id="burger-container"></section>
@@ -80,7 +83,7 @@
             </section>
             <section class="dishes" id="dessert-container"></section>
         </main>
-        <footer class="main-footer">
+        <footer>
             <p><strong>©</strong> 2026 BurgerHouse</p>
             <a href="./pages/imprint.html">Imprint</a>
             <p>Cookie Preferences</p>

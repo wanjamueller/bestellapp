@@ -1,16 +1,21 @@
 footer {
     height: 128px;
-    transition: 0.2s ease-in-out;
+    /* transition: 0.2s ease-in-out; */
 
     background-color: var(--color-orange);
     color: white;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     gap: 72px;
 
-    padding: min(70px, 5%) clamp(80px, calc(-25.714px + 33.036vw), 450px) min(30px, 5%)
-        clamp(80px, calc(-25.714px + 33.036vw), 450px);
+    /* padding: min(70px, 5%) clamp(80px, 10vw, 450px) min(30px, 5%) clamp(80px, 10vw, 450px); */
+    padding: min(70px, 5%) min(450px, 19dvw) min(30px, 5%) min(450px, 19dvw);
+
+    /* p {
+        width: 150px;
+    } */
 
     a {
         text-decoration: none;
@@ -29,6 +34,6 @@ footer {
 
 @media screen and (min-width: 1441px) {
     footer {
-        padding: 70px max(calc(50% - 270px), 450px) 30px max(calc(50% - 270px), 450px);
+        padding: 70px max(calc(50% - 466px), 274px) 30px max(calc(50% - 466px), 274px);
     }
 }

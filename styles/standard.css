@@ -51,12 +51,20 @@ main {
 @media screen and (max-width: 767px) {
     .main-content {
         min-height: calc(100vh-208px);
+
+        h2 {
+            font-size: var(--h2-category-size-mobile);
+        }
     }
 }
 
 @media screen and (min-width: 1441px) {
     .main-content {
         padding: 0px calc(50% - 720px);
+
+        .overlay {
+            top: -125px;
+        }
     }
 }
 

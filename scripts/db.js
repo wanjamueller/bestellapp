@@ -1,4 +1,4 @@
-let myDishes = [
+const myDishes = [
     {
         "name": "BBQ Bacon Burger",
         "ID": 1,

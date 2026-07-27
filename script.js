@@ -3,14 +3,15 @@ const pizzaRef = document.getElementById("pizza-container");
 const saladRef = document.getElementById("salad-container");
 const shakeRef = document.getElementById("milkshake-container");
 const dessertRef = document.getElementById("dessert-container");
+const CART_REF = document.getElementById("cart-wrapper");
 
 // #region render dishes
 
 function renderBurger() {
     const burger = dishes.filter((b) => b.category === "Burger & Sandwiches");
 
-    for (let burgerIndex = 0; burgerIndex < burger.length; burgerIndex++) {
-        burgerRef.innerHTML += dishTemplate(burger[burgerIndex]);
+    for (let i = 0; i < burger.length; i++) {
+        burgerRef.innerHTML += dishTemplate(burger[i]);
     }
 }
 
@@ -56,7 +57,47 @@ function renderDishes() {
 
 // #endregion render dishes
 
+// #region render basket
+
+function cartHasItems() {
+    return dishes.some((dish) => dish.amount > 0);
+}
+
+function renderBasket() {
+    if (cartHasItems()) {
+        CART_REF.innerHTML = basketTemplate();
+    }
+}
+
+// #endregion render basket
+
+// function renderBasket() {
+//     const basket = dishes.filter((b) => b.amount > 0);
+//     const DISH_REF = document.getElementById("cart-dishes");
+//     CART_REF.innerHTML = basketTemplate();
+
+//     for (let basketIndex = 0; basketIndex < basket.length; basketIndex++) {
+//         DISH_REF.innerHTML += basketDishTemplate(basket[basketIndex]);
+//     }
+// }
+
+// #endregion render basket
+
 // #region add dishes to cart
+
+function increaseAmount(id) {
+    const dish = dishes.find((d) => d.ID === id);
+    dish.amount++;
+    saveDishes();
+    renderBasketDish(id);
+}
+
+function renderBasketDish(id) {
+    const DISH_REF = document.getElementById("cart-dishes");
+    const dish = dishes.find((d) => d.ID === id);
+
+    DISH_REF.innerHTML += basketDishTemplate(dish);
+}
 
 // #endregion add dishes to cart
 
@@ -80,4 +121,6 @@ function saveDishes() {
 function init() {
     getDishes();
     renderDishes();
+    saveDishes();
+    renderBasket();
 }

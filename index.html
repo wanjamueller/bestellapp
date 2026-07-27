@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="./styles/basket.css" />
         <link rel="stylesheet" href="style.css" />
 
-        <script defer src="script.js"></script>
         <script defer src="./scripts/db.js"></script>
         <script defer src="./scripts/templates.js"></script>
+        <script defer src="script.js"></script>
     </head>
     <body onload="init()">
         <header class="main-header">
@@ -51,9 +51,7 @@
             <!-- #endregion hero section  -->
 
             <section class="dish-wrapper">
-                <div class="cart-wrapper">
-                    <div class="cart"></div>
-                </div>
+                <section id="cart-wrapper" class="cart-wrapper"></section>
                 <section class="category burger-section">
                     <img src="./assets/icons/burger.png" alt="" />
                     <h2>

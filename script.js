@@ -56,7 +56,28 @@ function renderDishes() {
 
 // #endregion render dishes
 
+// #region add dishes to cart
+
+// #endregion add dishes to cart
+
+// #region calculate price in cart
+
+// #endregion calculate price in cart
+
+// #region local storage
+
+function getDishes() {
+    dishes = JSON.parse(localStorage.getItem("dishes")) || myDishes;
+}
+
+function saveDishes() {
+    localStorage.setItem("dishes", JSON.stringify(dishes));
+}
+
+// #endregion local storage
+
 // Initialization
 function init() {
+    getDishes();
     renderDishes();
 }

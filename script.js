@@ -59,27 +59,28 @@ function renderDishes() {
 
 // #region render basket
 
-function cartHasItems() {
-    return dishes.some((dish) => dish.amount > 0);
-}
-
-function renderBasket() {
-    if (cartHasItems()) {
+function showBasket() {
+    if (dishes.some((dish) => dish.amount > 0)) {
         CART_REF.innerHTML = basketTemplate();
+        renderBasket();
+        renderAddButton();
     }
 }
 
+function renderBasket() {
+    const DISH_REF = document.getElementById("cart-dishes");
+    const basket = dishes.filter((b) => b.amount > 0);
+    DISH_REF.innerHTML = "";
+    for (let i = 0; i < basket.length; i++) {
+        DISH_REF.innerHTML += basketDishTemplate(basket[i]);
+    }
+}
+
+function renderAddButton() {
+    dishes.forEach((dish) => toggleAddButton(dish.ID));
+}
+
 // #endregion render basket
-
-// function renderBasket() {
-//     const basket = dishes.filter((b) => b.amount > 0);
-//     const DISH_REF = document.getElementById("cart-dishes");
-//     CART_REF.innerHTML = basketTemplate();
-
-//     for (let basketIndex = 0; basketIndex < basket.length; basketIndex++) {
-//         DISH_REF.innerHTML += basketDishTemplate(basket[basketIndex]);
-//     }
-// }
 
 // #endregion render basket
 
@@ -89,13 +90,20 @@ function increaseAmount(id) {
     const dish = dishes.find((d) => d.ID === id);
     dish.amount++;
     saveDishes();
-    renderBasketDish(id);
+    showBasket();
+    toggleAddButton(id);
+}
+
+function toggleAddButton(id) {
+    const dish = dishes.find((d) => d.ID === id);
+    const ADD_BUTTON_REF = document.getElementById(`add-button${dish.ID}`);
+    ADD_BUTTON_REF.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
+    ADD_BUTTON_REF.disabled = dish.amount > 0;
 }
 
 function renderBasketDish(id) {
     const DISH_REF = document.getElementById("cart-dishes");
     const dish = dishes.find((d) => d.ID === id);
-
     DISH_REF.innerHTML += basketDishTemplate(dish);
 }
 
@@ -120,7 +128,7 @@ function saveDishes() {
 // Initialization
 function init() {
     getDishes();
-    renderDishes();
     saveDishes();
-    renderBasket();
+    renderDishes();
+    showBasket();
 }

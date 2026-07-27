@@ -1,4 +1,4 @@
-function dishTemplate(dish, i) {
+function dishTemplate(dish) {
     return /*html*/ `
             <div class="dish-card">
                 <img class="dish-image" src="${dish.img}" alt="">
@@ -44,5 +44,3 @@ function basketDishTemplate(dish) {
         </div>
     `;
 }
-
-function toggleAddButton() {}

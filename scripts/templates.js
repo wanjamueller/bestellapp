@@ -9,7 +9,7 @@ function dishTemplate(dish) {
                     </div>
                     <div class="dish-price">
                         <h4>${dish.price} €</h4>
-                        <button class="add-button">add to basket</button>
+                        <button id="button${dish.ID}" class="add-button">add to basket</button>
                     </div>
                 </div>
             </div>

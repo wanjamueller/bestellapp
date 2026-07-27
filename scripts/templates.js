@@ -44,3 +44,5 @@ function basketDishTemplate(dish) {
         </div>
     `;
 }
+
+function toggleAddButton() {}

@@ -28,7 +28,7 @@ function basketTemplate(dish) {
             </div>
             <div id="total" class="total">
             </div>
-            <button>Buy now</button>
+            <button onclick="checkout()">Buy now</button>
         </div>
     `;
 }

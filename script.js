@@ -180,6 +180,19 @@ function renderTotal() {
 
 // #endregion calculate price in cart
 
+// #region checkout
+
+function checkout() {
+    const basket = dishes.filter((dish) => dish.amount > 0);
+    for (let index = 0; index < basket.length; index++) {
+        basket[index].amount = 0;
+        saveDishes();
+        showBasket();
+    }
+}
+
+// #endregion checkout
+
 // #region local storage
 
 function getDishes() {

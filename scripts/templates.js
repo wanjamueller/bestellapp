@@ -22,8 +22,13 @@ function basketTemplate(dish) {
             <h2>Your Basket</h2>
             <section id="cart-dishes" class="basket-dishes">
             </section>
-            <div class="subtotal"></div>
-            <div class="total"></div>
+            <div id="subtotal" class="subtotal">
+            </div>
+            <div id="delivery" class="delivery">
+            </div>
+            <div class="total">
+                <p>Total</p>
+            </div>
             <button>Buy now</button>
         </div>
     `;
@@ -42,5 +47,19 @@ function basketDishTemplate(dish) {
                 <p>${dish.price}</p>
             </div>
         </div>
+    `;
+}
+
+function subtotalTemplate(subtotal) {
+    return /*html*/ `
+        <p>Subtotal</p>
+        <p>${subtotal} €</p>
+    `;
+}
+
+function deliveryTemplate(deliveryFee) {
+    return /*html*/ `
+        <p>Delivery fee</p>
+        <p>${deliveryFee} €</p>
     `;
 }

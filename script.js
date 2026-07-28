@@ -78,6 +78,7 @@ function renderBasket() {
     }
     renderSubtotal();
     renderDelivery();
+    renderTotal();
 }
 
 function renderAddButton() {
@@ -105,6 +106,7 @@ function increaseAmount(id) {
     renderBasketDish(id);
     renderSubtotal();
     renderDelivery();
+    renderTotal();
 }
 
 function decreaseAmount(id) {
@@ -114,6 +116,7 @@ function decreaseAmount(id) {
     toggleAddButton(id);
     renderSubtotal();
     renderDelivery();
+    renderTotal();
     if (dish.amount > 0) {
         renderBasketDish(id);
     } else {
@@ -163,10 +166,17 @@ function calcDelivery(subtotal) {
 
 function renderDelivery() {
     const DELIVERY_REF = document.getElementById("delivery");
-    DELIVERY_REF.innerHTML = deliveryTemplate(calcDelivery());
+    DELIVERY_REF.innerHTML = deliveryTemplate(calcDelivery(calcSubtotal()));
 }
 
-function calcTotal() {}
+function calcTotal() {
+    return calcSubtotal() + calcDelivery(calcSubtotal());
+}
+
+function renderTotal() {
+    const totalRef = document.getElementById("total");
+    totalRef.innerHTML = totalTemplate(calcTotal());
+}
 
 // #endregion calculate price in cart
 

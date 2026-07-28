@@ -26,8 +26,7 @@ function basketTemplate(dish) {
             </div>
             <div id="delivery" class="delivery">
             </div>
-            <div class="total">
-                <p>Total</p>
+            <div id="total" class="total">
             </div>
             <button>Buy now</button>
         </div>
@@ -53,13 +52,20 @@ function basketDishTemplate(dish) {
 function subtotalTemplate(subtotal) {
     return /*html*/ `
         <p>Subtotal</p>
-        <p>${subtotal} €</p>
+        <p>${subtotal.toFixed(2)} €</p>
     `;
 }
 
 function deliveryTemplate(deliveryFee) {
     return /*html*/ `
         <p>Delivery fee</p>
-        <p>${deliveryFee} €</p>
+        <p>${deliveryFee.toFixed(2)} €</p>
+    `;
+}
+
+function totalTemplate(total) {
+    return /*html*/ `
+        <p>Total</p>
+        <p>${total.toFixed(2)} €</p>
     `;
 }

@@ -125,6 +125,17 @@ function decreaseAmount(id) {
     }
 }
 
+function deleteDish(id) {
+    const dish = dishes.find((d) => d.ID === id);
+    dish.amount = 0;
+    saveDishes();
+    toggleAddButton(id);
+    renderSubtotal();
+    renderDelivery();
+    renderTotal();
+    showBasket();
+}
+
 function toggleAddButton(id) {
     const dish = dishes.find((d) => d.ID === id);
     const ADD_BUTTON_REF = document.getElementById(`add-button${dish.ID}`);

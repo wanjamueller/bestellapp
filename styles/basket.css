@@ -32,6 +32,9 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            height: 415px;
+            overflow-y: auto;
+            padding-right: 5px;
 
             .cart-dish {
                 width: 100%;
@@ -80,6 +83,24 @@
                     justify-content: center;
                 }
             }
+        }
+
+        .basket-dishes::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .basket-dishes::-webkit-scrollbar-track {
+            background: var(--color-cream);
+            border-radius: 4px;
+        }
+
+        .basket-dishes::-webkit-scrollbar-thumb {
+            background: var(--color-orange);
+            border-radius: 4px;
+        }
+
+        .basket-dishes::-webkit-scrollbar-thumb:hover {
+            background: var(--color-orange);
         }
 
         .subtotal {

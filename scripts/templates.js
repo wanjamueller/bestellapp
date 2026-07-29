@@ -38,7 +38,7 @@ function basketDishTemplate(dish) {
         <div id="cart-dish${dish.ID}" class="cart-dish">
             <div class="cart-dish-name">
                 <p>${dish.name}</p>
-                <button class="delete"><img src="../assets/icons/delete.svg" alt=""></button>
+                <button class="delete" onclick="deleteDish(${dish.ID})"><img src="../assets/icons/delete.svg" alt=""></button>
             </div>
             
             <div class="amount-price">

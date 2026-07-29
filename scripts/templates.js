@@ -76,11 +76,17 @@ function totalTemplate(total) {
 
 function confirmationTemplate() {
     return /*html*/ `
-        <div>
-            <button onclick="closeConfirmation()">X</button>
-            <img src="../assets/icons/truck.png" alt="delivery truck">
-            <p>Order Confirmed!</p>
-            <p>Your food is on the way!</p>
-        </div>
+<div class="order-confirmed">
+                <div class="close-button">
+                    <button id="close" onclick="closeConfirmation()"><img src="../assets/icons/close.svg" alt="" /></button>
+                </div>
+                <div class="truck">                
+                    <img src="../assets/icons/truck.png" alt="delivery truck" />
+                </div>
+                <div class="confirmation-txt">
+                    <p class="order">Order Confirmed!</p>
+                    <p class="way">Your food is on the way!</p>
+                </div>
+            </div>
     `;
 }

@@ -72,17 +72,6 @@
     }
 }
 
-#confirmation.open {
-    background-color: var(--color-darkgrey);
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-
-    img {
-        align-self: center;
-    }
-}
-
 /* #endregion hero section */
 
 @media screen and (max-width: 767px) {

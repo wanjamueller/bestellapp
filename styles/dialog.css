@@ -1,0 +1,96 @@
+#confirmation.open {
+    margin: auto;
+    width: 415px;
+    height: 270px;
+    background-color: var(--color-darkgrey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 32px 40px;
+    border-style: none;
+
+    .close-button {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        #close {
+            color: var(--color-cream);
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+    }
+
+    .truck {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .confirmation-txt {
+        .order {
+            color: var(--color-cream);
+            text-align: center;
+            font-size: 2.625rem;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+        .way {
+            color: var(--color-cream);
+            text-align: center;
+            font-size: 1.8125rem;
+            font-weight: 700;
+            line-height: 120%;
+        }
+    }
+}
+
+/* .order-confirmed {
+    width: 415px;
+    height: 270px;
+    background-color: var(--color-darkgrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding: 32px 40px;
+
+    .close-button {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            color: var(--color-cream);
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+    }
+
+    img {
+        align-self: center;
+    }
+
+    .confirmation-txt {
+        .order {
+            color: var(--color-cream);
+            text-align: center;
+            font-size: 2.625rem;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+        .way {
+            color: var(--color-cream);
+            text-align: center;
+            font-size: 1.8125rem;
+            font-weight: 700;
+            line-height: 120%;
+        }
+    }
+} */

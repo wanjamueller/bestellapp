@@ -3,26 +3,38 @@
     flex-direction: column;
 
     .category {
-        height: 91px;
+        /* height: 91px;
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
         color: white;
         gap: 28px;
-        margin-bottom: 25px;
+        margin-bottom: 25px; */
 
-        img {
+        .category-wrapper {
             height: 91px;
-            align-self: flex-end;
-            padding-left: 167px;
-            z-index: 1;
-            bottom:;
-        }
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            color: white;
+            gap: 28px;
+            margin-bottom: 25px;
+            padding: 0px calc(50% - 720px);
 
-        h2 {
-            z-index: 1;
-            bottom: -10px;
+            img {
+                height: 91px;
+                align-self: flex-end;
+                padding-left: 167px;
+                z-index: 1;
+                bottom:;
+            }
+
+            h2 {
+                z-index: 1;
+                bottom: -10px;
+            }
         }
 
         .orange-bar {
@@ -32,6 +44,7 @@
             align-self: flex-end;
             margin-bottom: 3px;
             background-color: var(--color-orange);
+            bottom: 25px;
             z-index: -1;
         }
     }
@@ -39,8 +52,7 @@
     .dishes {
         display: flex;
         flex-direction: column;
-        padding: 23px clamp(3.75rem, -35.2838rem + 81.4264vw, 38rem) 45px
-            clamp(3.75rem, -0.4525rem + 8.7667vw, 7.4375rem);
+        padding: 23px calc(50% - 720px);
         gap: 16px;
 
         .dish-card {
@@ -52,6 +64,8 @@
             border-radius: 12px;
             gap: 15px;
             padding: 10px;
+            margin: 0px clamp(3.75rem, -35.2838rem + 81.4264vw, 38rem) 0px
+                clamp(3.75rem, -0.4525rem + 8.7667vw, 7.4375rem);
 
             .dish-image {
                 width: 207px;

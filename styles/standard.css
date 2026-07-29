@@ -61,7 +61,7 @@ main {
 
 @media screen and (min-width: 1441px) {
     .main-content {
-        padding: 0px calc(50% - 720px);
+        /* padding: 0px calc(50% - 720px); */
 
         .overlay {
             top: -125px;

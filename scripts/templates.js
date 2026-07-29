@@ -69,3 +69,14 @@ function totalTemplate(total) {
         <p>${total.toFixed(2)} €</p>
     `;
 }
+
+function confirmationTemplate() {
+    return /*html*/ `
+        <div>
+            <button onclick="closeConfirmation()">X</button>
+            <img src="../assets/icons/truck.png" alt="delivery truck">
+            <p>Order Confirmed!</p>
+            <p>Your food is on the way!</p>
+        </div>
+    `;
+}

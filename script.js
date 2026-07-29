@@ -4,6 +4,7 @@ const saladRef = document.getElementById("salad-container");
 const shakeRef = document.getElementById("milkshake-container");
 const dessertRef = document.getElementById("dessert-container");
 const CART_REF = document.getElementById("cart-wrapper");
+const DIALOG_REF = document.getElementById("confirmation");
 
 // #region render dishes
 
@@ -187,8 +188,26 @@ function checkout() {
     for (let index = 0; index < basket.length; index++) {
         basket[index].amount = 0;
         saveDishes();
+        toggleAddButton(index + 1);
         showBasket();
+        confirmation();
     }
+}
+
+function confirmation() {
+    showModal();
+    DIALOG_REF.classList.add("open");
+    DIALOG_REF.showModal();
+    // setTimeout(() => DIALOG_REF.close(), 5000);
+}
+
+function showModal() {
+    DIALOG_REF.innerHTML = confirmationTemplate();
+}
+
+function closeConfirmation() {
+    DIALOG_REF.close();
+    DIALOG_REF.classList.remove("open");
 }
 
 // #endregion checkout

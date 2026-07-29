@@ -12,7 +12,7 @@
     --h1-hero-size: clamp(2.5rem, 2.3571rem + 0.7143vw, 3rem);
     --h1-hero-size-mobile: 2.5rem;
     --h1-hero-weight: 700;
-    --h2-category-size: 2.5rem;
+    --h2-category-size: clamp(2rem, 1.4254rem + 1.194vw, 2.5rem);
     --h2-category-size-mobile: 2rem;
     --h2-categories-weight: 700;
 

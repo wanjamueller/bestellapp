@@ -75,7 +75,7 @@
 
 /* #endregion hero section */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .hero-section {
         .hero-img-div {
             padding: 15px 16px;

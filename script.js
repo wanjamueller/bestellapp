@@ -209,7 +209,7 @@ function confirmation() {
     showModal();
     DIALOG_REF.classList.add("open");
     DIALOG_REF.showModal();
-    // setTimeout(() => DIALOG_REF.close(), 5000);
+    setTimeout(() => DIALOG_REF.close(), 5000);
 }
 
 function showModal() {

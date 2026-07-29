@@ -40,7 +40,6 @@ function basketDishTemplate(dish) {
                 <p>${dish.name}</p>
                 <button class="delete" onclick="deleteDish(${dish.ID})"><img src="../assets/icons/delete.svg" alt=""></button>
             </div>
-            
             <div class="amount-price">
                 <div class="amount">
                     <button id="decrease${dish.ID}" onclick="decreaseAmount(${dish.ID})">-</button>

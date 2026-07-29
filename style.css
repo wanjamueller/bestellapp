@@ -77,11 +77,10 @@
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    
 
-    img (
+    img {
         align-self: center;
-    )
+    }
 }
 
 /* #endregion hero section */

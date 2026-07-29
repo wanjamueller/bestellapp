@@ -3,6 +3,7 @@
     position: absolute;
     right: 0px;
     top: 28px;
+    padding: 0px calc(50% - 720px);
 
     .cart {
         height: auto;
@@ -13,18 +14,20 @@
         bottom: calc(100dvh-400px);
         background-color: var(--color-darkgrey);
         border-radius: 30px 0 0 30px;
-        gap: 36px;
+        gap: 26px;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: clamp(0.9375rem, 0.5784rem + 0.7463vw, 1.25rem);
         color: var(--color-cream);
         z-index: 1;
 
         h2 {
             color: var(--color-cream);
+            line-height: 110%;
+            text-align: center;
         }
 
         .basket-dishes {
@@ -34,7 +37,6 @@
             gap: 10px;
             max-height: 300px;
             overflow-y: auto;
-            padding-right: 5px;
 
             .cart-dish {
                 width: 100%;
@@ -50,10 +52,12 @@
             }
 
             .cart-dish-name {
+                min-width: 100px;
                 display: flex;
                 justify-content: space-between;
+                gap: 10px;
 
-                button {
+                .delete {
                     cursor: pointer;
                     border: none;
                     background: none;
@@ -63,6 +67,7 @@
             .amount-price {
                 display: flex;
                 justify-content: space-between;
+                gap: 10px;
             }
 
             .amount {
@@ -83,24 +88,6 @@
                     justify-content: center;
                 }
             }
-        }
-
-        .basket-dishes::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .basket-dishes::-webkit-scrollbar-track {
-            background: var(--color-cream);
-            border-radius: 4px;
-        }
-
-        .basket-dishes::-webkit-scrollbar-thumb {
-            background: var(--color-orange);
-            border-radius: 4px;
-        }
-
-        .basket-dishes::-webkit-scrollbar-thumb:hover {
-            background: var(--color-orange);
         }
 
         .subtotal {
@@ -131,10 +118,10 @@
 
         .checkout {
             background-color: var(--color-orange);
-            width: 320px;
+            width: 100%;
             height: 64px;
-
             border-radius: 60px;
+            font-family: "Palanquin";
             font-size: 2rem;
             font-weight: 700;
             color: white;
@@ -143,7 +130,39 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 769px) and (max-width: 900px) {
+    .cart-dish {
+        .cart-dish-name {
+            flex-direction: column;
+
+            .delete {
+                align-self: flex-end;
+            }
+        }
+
+        .amount-price {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    .subtotal {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .delivery {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .total {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .cart-wrapper {
         display: none;
 
@@ -153,10 +172,10 @@
     }
 }
 
-@media screen and (min-width: 1441px) {
+/* @media screen and (min-width: 1441px) {
     .cart-wrapper {
         .cart {
             border-radius: 30px;
         }
     }
-}
+} */

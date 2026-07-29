@@ -28,7 +28,7 @@ function basketTemplate(dish) {
             </div>
             <div id="total" class="total">
             </div>
-            <button onclick="checkout()">Buy now</button>
+            <button class="checkout" onclick="checkout()">Buy now</button>
         </div>
     `;
 }
@@ -36,14 +36,18 @@ function basketTemplate(dish) {
 function basketDishTemplate(dish) {
     return /*html*/ `
         <div id="cart-dish${dish.ID}" class="cart-dish">
-            <p>${dish.amount} x ${dish.name}</p>
+            <div class="cart-dish-name">
+                <p>${dish.name}</p>
+                <button class="delete"><img src="../assets/icons/delete.svg" alt=""></button>
+            </div>
+            
             <div class="amount-price">
                 <div class="amount">
-                    <button id="increase${dish.ID}" onclick="increaseAmount(${dish.ID})">+</button>
-                    <p>${dish.amount}</p>
                     <button id="decrease${dish.ID}" onclick="decreaseAmount(${dish.ID})">-</button>
+                    <p class="dish-amount">${dish.amount}</p>
+                    <button id="increase${dish.ID}" onclick="increaseAmount(${dish.ID})">+</button>
                 </div>
-                <p>${dish.price}</p>
+                <p>${dish.price} €</p>
             </div>
         </div>
     `;

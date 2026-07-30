@@ -33,6 +33,16 @@ function basketTemplate(dish) {
     `;
 }
 
+function basketTemplateEmpty() {
+    return /*html*/ `
+        <div id="cart" class="cart">
+            <h2>Your Basket</h2>
+            <p>Nothing here yet. Go ahead and choose something delicious!</p>
+            <img src="./assets/icons/basket-empty.svg" alt="">
+        </div>
+    `;
+}
+
 function basketDishTemplate(dish) {
     return /*html*/ `
         <div id="cart-dish${dish.ID}" class="cart-dish">
@@ -92,14 +102,14 @@ function confirmationTemplate() {
 
 function OrangeCartTemplate(TotalAmount) {
     return /*html*/ `
-        <a href=""><img src="./assets/icons/cart-orange.svg" alt="" /></a>
+        <button class="cart-button" onclick="toggleMobileBasket()"><img src="./assets/icons/cart-orange.svg" alt="" /></button>
         <p ID="total-amount">${TotalAmount}</p>
     `;
 }
 
 function WhiteCartTemplate() {
     return /*html*/ `
-        <a href=""><img src="./assets/icons/cart.svg" alt="" /></a>
+        <button class="cart-button" onclick="openEmptyBasket()"><img src="./assets/icons/cart.svg" alt="" /></button>
     `;
 }
 

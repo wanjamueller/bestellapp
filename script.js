@@ -66,9 +66,24 @@ function showBasket() {
         renderBasket();
         renderAddButton();
     } else {
+        // CART_REF.innerHTML = basketTemplateEmpty();
         CART_REF.innerHTML = "";
+        hideMobileBasket();
     }
     renderCartIcon();
+}
+
+function toggleMobileBasket() {
+    CART_REF.classList.toggle("open");
+}
+
+function hideMobileBasket() {
+    CART_REF.classList.remove("open");
+}
+
+function openEmptyBasket() {
+    CART_REF.classList.toggle("empty");
+    CART_REF.innerHTML = basketTemplateEmpty();
 }
 
 function renderBasket() {

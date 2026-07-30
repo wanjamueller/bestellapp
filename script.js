@@ -66,7 +66,6 @@ function showBasket() {
         renderBasket();
         renderAddButton();
     } else {
-        // CART_REF.innerHTML = basketTemplateEmpty();
         CART_REF.innerHTML = "";
         hideMobileBasket();
     }
@@ -101,8 +100,6 @@ function renderBasket() {
 function renderAddButton() {
     dishes.forEach((dish) => toggleAddButton(dish.ID));
 }
-
-// #endregion render basket
 
 // #endregion render basket
 
@@ -228,6 +225,7 @@ function confirmation() {
     DIALOG_REF.classList.add("open");
     DIALOG_REF.showModal();
     setTimeout(() => DIALOG_REF.close(), 5000);
+    setTimeout(() => DIALOG_REF.classList.remove("open"), 5000);
 }
 
 function showModal() {
@@ -271,10 +269,6 @@ function calcTotalAmount() {
     }
     return TotalAmount;
 }
-
-// function renderNavbar () {
-
-// }
 
 // #endregion navbar
 

@@ -1,18 +1,18 @@
 function dishTemplate(dish) {
     return /*html*/ `
-            <div class="dish-card">
-                <img class="dish-image" src="${dish.img}" alt="">
-                <div class="dish-text-wrapper">
-                    <div class="dish-name">
-                        <h4>${dish.name}</h4>
-                        <p>${dish.description}</p>
-                    </div>
-                    <div class="dish-price">
-                        <h4>${dish.price} €</h4>
-                        <button id="add-button${dish.ID}" onclick="amountOne(${dish.ID})" class="add-button">add to basket</button>
-                    </div>
+        <div class="dish-card">
+            <img class="dish-image" src="${dish.img}" alt="">
+            <div class="dish-text-wrapper">
+                <div class="dish-name">
+                    <h4>${dish.name}</h4>
+                    <p>${dish.description}</p>
+                </div>
+                <div class="dish-price">
+                    <h4>${dish.price} €</h4>
+                    <button id="add-button${dish.ID}" onclick="amountOne(${dish.ID})" class="add-button">add to basket</button>
                 </div>
             </div>
+        </div>
     `;
 }
 
@@ -85,18 +85,18 @@ function totalTemplate(total) {
 
 function confirmationTemplate() {
     return /*html*/ `
-<div class="order-confirmed">
-                <div class="close-button">
-                    <button id="close" onclick="closeConfirmation()"><img src="../assets/icons/close.svg" alt="" /></button>
-                </div>
-                <div class="truck">                
-                    <img src="../assets/icons/truck.png" alt="delivery truck" />
-                </div>
-                <div class="confirmation-txt">
-                    <p class="order">Order Confirmed!</p>
-                    <p class="way">Your food is on the way!</p>
-                </div>
+        <div class="order-confirmed">
+            <div class="close-button">
+                <button id="close" onclick="closeConfirmation()"><img src="../assets/icons/close.svg" alt="" /></button>
             </div>
+            <div class="truck">                
+                <img src="../assets/icons/truck.png" alt="delivery truck" />
+            </div>
+            <div class="confirmation-txt">
+                <p class="order">Order Confirmed!</p>
+                <p class="way">Your food is on the way!</p>
+            </div>
+        </div>
     `;
 }
 
@@ -112,23 +112,3 @@ function WhiteCartTemplate() {
         <button class="cart-button" onclick="openEmptyBasket()"><img src="./assets/icons/cart.svg" alt="" /></button>
     `;
 }
-
-// function navBar() {
-//     return /*html*/ `
-//         <ul>
-//             <li>
-//                 <a href="index.html"><img src="./assets/icons/home.svg" alt="" /></a>
-//             </li>
-//             <li>
-//                 <img src="./assets/icons/person.svg" alt="" />
-//             </li>
-//             <li>
-//                 <img src="./assets/icons/takeout.svg" alt="" />
-//             </li>
-//             <li>
-//                     <a href=""><img src="./assets/icons/cart.svg" alt="" /></a>
-//             </li>
-//         </ul>
-
-//     `;
-// }

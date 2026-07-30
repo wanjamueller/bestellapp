@@ -1,21 +1,12 @@
 footer {
     height: 128px;
-    /* transition: 0.2s ease-in-out; */
-
     background-color: var(--color-orange);
     color: white;
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 72px;
-
-    /* padding: min(70px, 5%) clamp(80px, 10vw, 450px) min(30px, 5%) clamp(80px, 10vw, 450px); */
     padding: min(70px, 5%) min(450px, 19dvw) min(30px, 5%) min(450px, 19dvw);
-
-    /* p {
-        width: 150px;
-    } */
 
     a {
         text-decoration: none;

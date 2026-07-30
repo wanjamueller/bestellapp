@@ -89,3 +89,36 @@ function confirmationTemplate() {
             </div>
     `;
 }
+
+function OrangeCartTemplate(TotalAmount) {
+    return /*html*/ `
+        <a href=""><img src="./assets/icons/cart-orange.svg" alt="" /></a>
+        <p ID="total-amount">${TotalAmount}</p>
+    `;
+}
+
+function WhiteCartTemplate() {
+    return /*html*/ `
+        <a href=""><img src="./assets/icons/cart.svg" alt="" /></a>
+    `;
+}
+
+// function navBar() {
+//     return /*html*/ `
+//         <ul>
+//             <li>
+//                 <a href="index.html"><img src="./assets/icons/home.svg" alt="" /></a>
+//             </li>
+//             <li>
+//                 <img src="./assets/icons/person.svg" alt="" />
+//             </li>
+//             <li>
+//                 <img src="./assets/icons/takeout.svg" alt="" />
+//             </li>
+//             <li>
+//                     <a href=""><img src="./assets/icons/cart.svg" alt="" /></a>
+//             </li>
+//         </ul>
+
+//     `;
+// }

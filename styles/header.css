@@ -8,9 +8,28 @@ header {
     align-items: center;
 
     padding: 49px 50px 41px 120px;
+
+    nav {
+        display: flex;
+        gap: 15px;
+        ul {
+            display: none;
+            /* list-style: none;
+            display: flex;
+            gap: 15px;
+
+            a,
+            img {
+                height: 35px;
+            } */
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        padding-bottom: 78px;
+    }
     header {
         height: 80px;
         justify-content: center;
@@ -18,7 +37,43 @@ header {
         transition: 0.2s ease-in-out;
 
         nav {
-            display: none;
+            position: fixed;
+            height: 78px;
+            bottom: 0;
+            z-index: 1;
+            background-color: var(--color-darkgrey);
+            width: 100%;
+            align-items: center;
+            padding: 24px clamp(1.5625rem, 0.4464rem + 5.5804vw, 3.125rem);
+
+            > img {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                width: 100%;
+                gap: 0;
+                justify-content: space-between;
+                list-style: none;
+
+                #cart-icon {
+                    display: flex;
+
+                    p {
+                        height: 20px;
+                        width: 20px;
+                        background-color: rgba(253, 234, 220, 1);
+                        border-radius: 50%;
+                        text-align: center;
+                        color: var(--color-orange);
+                        bottom: 10px;
+                        right: 10px;
+                        font-family: "Palanquin";
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 }

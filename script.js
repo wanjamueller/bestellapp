@@ -68,6 +68,7 @@ function showBasket() {
     } else {
         CART_REF.innerHTML = "";
     }
+    renderCartIcon();
 }
 
 function renderBasket() {
@@ -108,6 +109,7 @@ function increaseAmount(id) {
     renderSubtotal();
     renderDelivery();
     renderTotal();
+    renderCartIcon();
 }
 
 function decreaseAmount(id) {
@@ -118,6 +120,7 @@ function decreaseAmount(id) {
     renderSubtotal();
     renderDelivery();
     renderTotal();
+    renderCartIcon();
     if (dish.amount > 0) {
         renderBasketDish(id);
     } else {
@@ -234,6 +237,31 @@ function saveDishes() {
 }
 
 // #endregion local storage
+
+// #region navbar
+
+function renderCartIcon() {
+    const CartIconRef = document.getElementById("cart-icon");
+    if (dishes.some((dish) => dish.amount > 0)) {
+        CartIconRef.innerHTML = OrangeCartTemplate(calcTotalAmount());
+    } else {
+        CartIconRef.innerHTML = WhiteCartTemplate();
+    }
+}
+
+function calcTotalAmount() {
+    let TotalAmount = 0;
+    for (let i = 0; i < dishes.length; i++) {
+        TotalAmount += dishes[i].amount;
+    }
+    return TotalAmount;
+}
+
+// function renderNavbar () {
+
+// }
+
+// #endregion navbar
 
 // Initialization
 function init() {

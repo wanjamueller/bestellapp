@@ -5,6 +5,7 @@ const SHAKE_REF = document.getElementById("milkshake-container");
 const DESSERT_REF = document.getElementById("dessert-container");
 const CART_REF = document.getElementById("cart-wrapper");
 const DIALOG_REF = document.getElementById("confirmation");
+const BODY_REF = document.getElementById("body");
 
 // #region render dishes
 
@@ -74,15 +75,18 @@ function showBasket() {
 
 function toggleMobileBasket() {
     CART_REF.classList.toggle("open");
+    BODY_REF.classList.toggle("no-scroll");
 }
 
 function hideMobileBasket() {
     CART_REF.classList.remove("open");
+    BODY_REF.classList.remove("no-scroll");
 }
 
 function openEmptyBasket() {
     CART_REF.classList.toggle("empty");
     CART_REF.innerHTML = basketTemplateEmpty();
+    BODY_REF.classList.toggle("no-scroll");
 }
 
 function renderBasket() {
@@ -155,7 +159,7 @@ function toggleAddButton(id) {
     const dish = dishes.find((d) => d.ID === id);
     const addButtonRef = document.getElementById(`add-button${dish.ID}`);
     addButtonRef.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
-    addButtonRef.disabled = dish.amount > 0;
+    // addButtonRef.disabled = dish.amount > 0;
 }
 
 function toggleAddButtonCheckout(dish) {

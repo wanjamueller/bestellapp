@@ -1,6 +1,6 @@
 const myDishes = [
     {
-        "name": "BBQ Bacon Burger",
+        "name": "Bacon Burger",
         "ID": 1,
         "description":
             "Beef patty smothered in smoky BBQ sauce, crispy bacon, cheddar cheese, and crunchy onion straws on a toasted brioche bun.",
@@ -22,7 +22,7 @@ const myDishes = [
         "amount": 0,
     },
     {
-        "name": "Cheeseburger",
+        "name": "Cheesy Burger",
         "ID": 3,
         "description":
             "Juicy beef patty, melted American cheese, lettuce, tomato, pickles, and house sauce on a soft sesame bun.",
@@ -44,7 +44,7 @@ const myDishes = [
         "amount": 0,
     },
     {
-        "name": "BBQ Brisket Burger",
+        "name": "Brisket Burger",
         "ID": 5,
         "description":
             "Slow-smoked beef brisket, tangy BBQ glaze, crispy fried onions, and pepper jack cheese on a pretzel bun.",

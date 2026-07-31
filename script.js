@@ -158,8 +158,7 @@ function toggleAddButton(id) {
     addButtonRef.disabled = dish.amount > 0;
 }
 
-function toggleAddButtonCheckout(id) {
-    const dish = dishes.find((d) => d.ID === id + 1);
+function toggleAddButtonCheckout(dish) {
     const addButtonRef = document.getElementById(`add-button${dish.ID}`);
     addButtonRef.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
     addButtonRef.disabled = dish.amount > 0;
@@ -218,13 +217,15 @@ function renderTotal() {
 
 function checkout() {
     const basket = dishes.filter((dish) => dish.amount > 0);
-    for (let index = 0; index < basket.length; index++) {
-        basket[index].amount = 0;
-        toggleAddButtonCheckout(index);
-        saveDishes();
-        showBasket();
-        confirmation();
+
+    for (const dish of basket) {
+        dish.amount = 0;
+        toggleAddButtonCheckout(dish);
     }
+
+    saveDishes();
+    showBasket();
+    confirmation();
 }
 
 function confirmation() {
@@ -233,6 +234,7 @@ function confirmation() {
     DIALOG_REF.showModal();
     setTimeout(() => DIALOG_REF.close(), 5000);
     setTimeout(() => DIALOG_REF.classList.remove("open"), 5000);
+    // setTimeout(() => location.reload(), 5000);
 }
 
 function showModal() {

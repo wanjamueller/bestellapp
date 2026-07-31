@@ -109,6 +109,6 @@ function OrangeCartTemplate(TotalAmount) {
 
 function WhiteCartTemplate() {
     return /*html*/ `
-        <button class="cart-button" onclick="openEmptyBasket()"><img src="./assets/icons/cart.svg" alt="shopping cart icon" /></button>
+        <button class="cart-button-empty" onclick="openEmptyBasket()"><img src="./assets/icons/cart.svg" alt="shopping cart icon" /></button>
     `;
 }

@@ -1,8 +1,8 @@
-const burgerRef = document.getElementById("burger-container");
-const pizzaRef = document.getElementById("pizza-container");
-const saladRef = document.getElementById("salad-container");
-const shakeRef = document.getElementById("milkshake-container");
-const dessertRef = document.getElementById("dessert-container");
+const BURGER_REF = document.getElementById("burger-container");
+const PIZZA_REF = document.getElementById("pizza-container");
+const SALAD_REF = document.getElementById("salad-container");
+const SHAKE_REF = document.getElementById("milkshake-container");
+const DESSERT_REF = document.getElementById("dessert-container");
 const CART_REF = document.getElementById("cart-wrapper");
 const DIALOG_REF = document.getElementById("confirmation");
 
@@ -12,7 +12,7 @@ function renderBurger() {
     const burger = dishes.filter((b) => b.category === "Burger & Sandwiches");
 
     for (let i = 0; i < burger.length; i++) {
-        burgerRef.innerHTML += dishTemplate(burger[i]);
+        BURGER_REF.innerHTML += dishTemplate(burger[i]);
     }
 }
 
@@ -20,7 +20,7 @@ function renderPizza() {
     const pizza = dishes.filter((p) => p.category === "Pizza");
 
     for (let pizzaIndex = 0; pizzaIndex < pizza.length; pizzaIndex++) {
-        pizzaRef.innerHTML += dishTemplate(pizza[pizzaIndex]);
+        PIZZA_REF.innerHTML += dishTemplate(pizza[pizzaIndex]);
     }
 }
 
@@ -28,7 +28,7 @@ function renderSalad() {
     const salad = dishes.filter((s) => s.category === "Salads");
 
     for (let saladIndex = 0; saladIndex < salad.length; saladIndex++) {
-        saladRef.innerHTML += dishTemplate(salad[saladIndex]);
+        SALAD_REF.innerHTML += dishTemplate(salad[saladIndex]);
     }
 }
 
@@ -36,7 +36,7 @@ function renderMilkshakes() {
     const milkshake = dishes.filter((m) => m.category === "Milkshakes");
 
     for (let shakeIndex = 0; shakeIndex < milkshake.length; shakeIndex++) {
-        shakeRef.innerHTML += dishTemplate(milkshake[shakeIndex]);
+        SHAKE_REF.innerHTML += dishTemplate(milkshake[shakeIndex]);
     }
 }
 
@@ -44,7 +44,7 @@ function renderDesserts() {
     const dessert = dishes.filter((d) => d.category === "Desserts");
 
     for (let dessertIndex = 0; dessertIndex < dessert.length; dessertIndex++) {
-        dessertRef.innerHTML += dishTemplate(dessert[dessertIndex]);
+        DESSERT_REF.innerHTML += dishTemplate(dessert[dessertIndex]);
     }
 }
 
@@ -86,11 +86,11 @@ function openEmptyBasket() {
 }
 
 function renderBasket() {
-    const DISH_REF = document.getElementById("cart-dishes");
+    const dishRef = document.getElementById("cart-dishes");
     const basket = dishes.filter((b) => b.amount > 0);
-    DISH_REF.innerHTML = "";
+    dishRef.innerHTML = "";
     for (let i = 0; i < basket.length; i++) {
-        DISH_REF.innerHTML += basketDishTemplate(basket[i]);
+        dishRef.innerHTML += basketDishTemplate(basket[i]);
     }
     renderSubtotal();
     renderDelivery();
@@ -153,15 +153,15 @@ function deleteDish(id) {
 
 function toggleAddButton(id) {
     const dish = dishes.find((d) => d.ID === id);
-    const ADD_BUTTON_REF = document.getElementById(`add-button${dish.ID}`);
-    ADD_BUTTON_REF.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
-    ADD_BUTTON_REF.disabled = dish.amount > 0;
+    const addButtonRef = document.getElementById(`add-button${dish.ID}`);
+    addButtonRef.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
+    addButtonRef.disabled = dish.amount > 0;
 }
 
 function renderBasketDish(id) {
     const dish = dishes.find((d) => d.ID === id);
-    const DISH_UID_REF = document.getElementById(`cart-dish${dish.ID}`);
-    DISH_UID_REF.outerHTML = basketDishTemplate(dish);
+    const dishUidRef = document.getElementById(`cart-dish${dish.ID}`);
+    dishUidRef.outerHTML = basketDishTemplate(dish);
 }
 
 // #endregion add dishes to cart
@@ -178,8 +178,8 @@ function calcSubtotal() {
 }
 
 function renderSubtotal() {
-    const SUBTOTAL_REF = document.getElementById("subtotal");
-    SUBTOTAL_REF.innerHTML = subtotalTemplate(calcSubtotal());
+    const subtotalRef = document.getElementById("subtotal");
+    subtotalRef.innerHTML = subtotalTemplate(calcSubtotal());
     calcDelivery(calcSubtotal());
 }
 
@@ -192,8 +192,8 @@ function calcDelivery(subtotal) {
 }
 
 function renderDelivery() {
-    const DELIVERY_REF = document.getElementById("delivery");
-    DELIVERY_REF.innerHTML = deliveryTemplate(calcDelivery(calcSubtotal()));
+    const deliveryRef = document.getElementById("delivery");
+    deliveryRef.innerHTML = deliveryTemplate(calcDelivery(calcSubtotal()));
 }
 
 function calcTotal() {
@@ -273,6 +273,7 @@ function calcTotalAmount() {
 // #endregion navbar
 
 // Initialization
+
 function init() {
     getDishes();
     saveDishes();

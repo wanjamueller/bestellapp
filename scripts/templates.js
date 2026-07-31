@@ -87,10 +87,10 @@ function confirmationTemplate() {
     return /*html*/ `
         <div class="order-confirmed">
             <div class="close-button">
-                <button id="close" onclick="closeConfirmation()"><img src="../assets/icons/close.svg" alt="x icon to close" /></button>
+                <button id="close" onclick="closeConfirmation()"><img src="./assets/icons/close.svg" alt="x icon to close" /></button>
             </div>
             <div class="truck">                
-                <img src="../assets/icons/truck.png" alt="delivery truck" />
+                <img src="./assets/icons/truck.png" alt="delivery truck" />
             </div>
             <div class="confirmation-txt">
                 <p class="order">Order Confirmed!</p>

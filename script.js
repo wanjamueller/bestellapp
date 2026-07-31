@@ -158,6 +158,13 @@ function toggleAddButton(id) {
     addButtonRef.disabled = dish.amount > 0;
 }
 
+function toggleAddButtonCheckout(id) {
+    const dish = dishes.find((d) => d.ID === id + 1);
+    const addButtonRef = document.getElementById(`add-button${dish.ID}`);
+    addButtonRef.innerText = dish.amount > 0 ? `added ${dish.amount} x` : "add to basket";
+    addButtonRef.disabled = dish.amount > 0;
+}
+
 function renderBasketDish(id) {
     const dish = dishes.find((d) => d.ID === id);
     const dishUidRef = document.getElementById(`cart-dish${dish.ID}`);
@@ -213,8 +220,8 @@ function checkout() {
     const basket = dishes.filter((dish) => dish.amount > 0);
     for (let index = 0; index < basket.length; index++) {
         basket[index].amount = 0;
+        toggleAddButtonCheckout(index);
         saveDishes();
-        toggleAddButton(index + 1);
         showBasket();
         confirmation();
     }

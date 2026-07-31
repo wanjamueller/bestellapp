@@ -43,8 +43,8 @@
                 width: 100%;
                 background-color: var(--color-cream);
                 color: var(--color-darkgrey);
-                font-size: 1.375rem;
-                font-weight: 700;
+                font-size: var(--p-cart-size);
+                font-weight: var(--p-cart-weight);
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
@@ -59,7 +59,6 @@
                 gap: 10px;
 
                 .delete {
-                    cursor: pointer;
                     border: none;
                     background: none;
                 }
@@ -76,7 +75,6 @@
                 gap: 5px;
 
                 button {
-                    cursor: pointer;
                     border: none;
                     background: none;
                     font-size: 1.375rem;
@@ -95,8 +93,8 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: var(--sum-cart-size);
+            font-weight: var(--sum-cart-weight);
         }
 
         .delivery {
@@ -104,8 +102,8 @@
             display: flex;
             justify-content: space-between;
             border-bottom: solid;
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: var(--sum-cart-size);
+            font-weight: var(--sum-cart-weight);
             padding-bottom: 19px;
         }
 
@@ -113,8 +111,8 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            font-size: 1.375rem;
-            font-weight: 700;
+            font-size: var(--total-cart-size);
+            font-weight: var(--total-cart-weight);
         }
 
         .checkout {
@@ -123,8 +121,8 @@
             height: 64px;
             border-radius: 60px;
             font-family: "Palanquin";
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: var(--h3-cart-size);
+            font-weight: var(--h3-cart-weight);
             color: white;
             border-style: none;
         }

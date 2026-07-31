@@ -3,7 +3,7 @@
     position: absolute;
     right: 0px;
     top: 28px;
-    padding: 0px calc(50% - 720px);
+    padding: 0px calc(50% - 720px) 0px 0px;
 
     .cart {
         height: auto;
@@ -89,6 +89,26 @@
             }
         }
 
+        .basket-dishes::-webkit-scrollbar {
+            width: 26px;
+        }
+
+        .basket-dishes::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px 6px transparent;
+            border: solid 10px transparent;
+        }
+
+        .basket-dishes::-webkit-scrollbar-thumb {
+            border-radius: 30px;
+            box-shadow: inset 0 0 6px 6px var(--color-orange);
+            border: solid 10px transparent;
+        }
+
+        .basket-dishes::-webkit-scrollbar-thumb:hover {
+            box-shadow: inset 0 0 6px 6px var(--color-darkgrey);
+            border: solid 10px transparent;
+        }
+
         .subtotal {
             width: 100%;
             display: flex;
@@ -166,36 +186,40 @@
         display: none;
     }
     .open {
+        height: 700px;
         display: flex;
         position: fixed;
         width: 100%;
         z-index: 0;
         overscroll-behavior: contain;
         overflow: hidden;
+        top: auto;
+        bottom: 77px;
 
         .cart {
             width: 100%;
             background-color: var(--color-darkgrey);
             border-radius: 30px 30px 0 0px;
             gap: 20px;
-            margin-bottom: 105px;
         }
     }
 
     .empty {
+        height: 700px;
         display: flex;
         position: fixed;
         width: 100%;
         z-index: 0;
         overscroll-behavior: contain;
         overflow: hidden;
+        top: auto;
+        bottom: 77px;
 
         .cart {
             width: 100%;
             background-color: var(--color-darkgrey);
             border-radius: 30px 30px 0 0px;
             gap: 20px;
-            margin-bottom: 105px;
             padding: 50px;
 
             p {

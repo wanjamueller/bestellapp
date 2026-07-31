@@ -48,7 +48,7 @@ function basketDishTemplate(dish) {
         <div id="cart-dish${dish.ID}" class="cart-dish">
             <div class="cart-dish-name">
                 <p>${dish.name}</p>
-                <button class="delete" onclick="deleteDish(${dish.ID})"><img src="../assets/icons/delete.svg" alt="waste basket icon"></button>
+                <button class="delete" onclick="deleteDish(${dish.ID})"><img src="./assets/icons/delete.svg" alt="waste basket icon"></button>
             </div>
             <div class="amount-price">
                 <div class="amount">

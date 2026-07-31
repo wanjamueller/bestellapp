@@ -97,13 +97,13 @@ function renderBasket() {
     renderTotal();
 }
 
+// #endregion render basket
+
+// #region adding and deleting dishes to/from cart
+
 function renderAddButton() {
     dishes.forEach((dish) => toggleAddButton(dish.ID));
 }
-
-// #endregion render basket
-
-// #region add dishes to cart
 
 function amountOne(id) {
     const dish = dishes.find((d) => d.ID === id);
@@ -164,7 +164,7 @@ function renderBasketDish(id) {
     dishUidRef.outerHTML = basketDishTemplate(dish);
 }
 
-// #endregion add dishes to cart
+// #endregion adding and deleting dishes to/from cart
 
 // #region calculate price in cart
 
@@ -207,7 +207,7 @@ function renderTotal() {
 
 // #endregion calculate price in cart
 
-// #region checkout
+// #region checkout and confirmation
 
 function checkout() {
     const basket = dishes.filter((dish) => dish.amount > 0);
@@ -237,7 +237,7 @@ function closeConfirmation() {
     DIALOG_REF.classList.remove("open");
 }
 
-// #endregion checkout
+// #endregion checkout and confirmation
 
 // #region local storage
 

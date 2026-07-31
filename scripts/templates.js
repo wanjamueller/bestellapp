@@ -56,8 +56,8 @@ function basketDishTemplate(dish) {
                     <p class="dish-amount">${dish.amount}</p>
                     <button id="increase${dish.ID}" onclick="increaseAmount(${dish.ID})">+</button>
                 </div>
-                <p>${dish.price} €</p>
-            </div>
+                <p id="dish-subtotal">${(dish.price * dish.amount).toFixed(2)} €</p>
+            </div>  
         </div>
     `;
 }

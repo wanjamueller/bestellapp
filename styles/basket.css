@@ -7,7 +7,7 @@
 
     .cart {
         height: auto;
-        width: clamp(12.1875rem, -2.4146rem + 30.4606vw, 25rem);
+        width: clamp(15.5rem, 0.1863rem + 27.5708vw, 25rem);
         position: sticky;
         left: 100%;
         top: 0px;
@@ -54,6 +54,7 @@
 
             .cart-dish-name {
                 min-width: 100px;
+                min-height: 40px;
                 display: flex;
                 justify-content: space-between;
                 gap: 10px;
@@ -151,33 +152,20 @@
 
 @media screen and (min-width: 769px) and (max-width: 900px) {
     .cart-dish {
-        .cart-dish-name {
-            flex-direction: column;
-
-            .delete {
-                align-self: flex-end;
-            }
+        .subtotal {
+            font-size: 1.25rem;
+            font-weight: 600;
         }
 
-        .amount-price {
-            flex-direction: column;
-            align-items: flex-end;
+        .delivery {
+            font-size: 1.25rem;
+            font-weight: 600;
         }
-    }
 
-    .subtotal {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-
-    .delivery {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-
-    .total {
-        font-size: 1.375rem;
-        font-weight: 700;
+        .total {
+            font-size: 1.375rem;
+            font-weight: 700;
+        }
     }
 }
 
@@ -186,7 +174,7 @@
         display: none;
     }
     .open {
-        height: 700px;
+        height: auto;
         display: flex;
         position: fixed;
         width: 100%;
@@ -198,6 +186,7 @@
 
         .cart {
             width: 100%;
+            justify-content: flex-end;
             background-color: var(--color-darkgrey);
             border-radius: 30px 30px 0 0px;
             gap: 20px;
@@ -205,7 +194,7 @@
     }
 
     .empty {
-        height: 700px;
+        height: auto;
         display: flex;
         position: fixed;
         width: 100%;

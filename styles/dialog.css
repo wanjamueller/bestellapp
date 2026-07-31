@@ -47,3 +47,9 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #confirmation.open {
+        margin-bottom: 90%;
+    }
+}

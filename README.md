@@ -1,3 +1,4 @@
+
 # 🍔 BurgerHome
 
 A food delivery web app built with vanilla JavaScript — no frameworks, no build step, no dependencies.
@@ -5,7 +6,7 @@ A food delivery web app built with vanilla JavaScript — no frameworks, no buil
 **[→ Live Demo](https://wanjamueller.developerakademie.net/bestellapp/index.html)**
 
 <!-- Add a screenshot here — drag an image into the GitHub issue editor to get a hosted URL -->
-![BurgerHome screenshot](./assets/img/screenshot.png)
+<img width="2862" height="1788" alt="screenshot" src="https://github.com/user-attachments/assets/21abdd4a-cad4-424b-8849-ed1e6c6b1003" />
 
 ---
 
